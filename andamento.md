@@ -36,3 +36,31 @@
    2. Passo 6.2: Configurar o ValidationPipe
    3. Passo 6.3: Criar DTOs para Validação
    4. Passo 6.4: Atualizar o Controlador
+
+Plano de Implementação
+Adicionar Autenticação (Login e Registro)
+
+Criar o módulo de autenticação.
+Implementar autenticação usando JWT.
+Adicionar registro de usuários e login.
+Associar Tarefas a Usuários
+
+Atualizar a entidade User.
+Adicionar um relacionamento entre User e Task.
+Proteger os endpoints de tarefas para que cada usuário veja apenas suas tarefas.
+
+1. Autenticação com JWT
+
+   1. Passo 1.1: Instalar Dependências
+   2. Passo 1.2: Criar o Módulo de Usuários
+   3. Passo 1.3: Criar a Entidade User
+   4. Passo 1.4: Registrar a Entidade User
+   5. Passo 1.5: Criar DTOs para Registro e Login
+   6. Passo 1.6: Implementar o Serviço de Usuários
+   7. Passo 1.7: Configurar JWT no Módulo de Autenticação
+   8. Passo 1.8: Implementar Login e Geração de Token
+
+2. Associar Tarefas a Usuários
+   1. Atualize a entidade Task para incluir a relação com User:
+   2. Atualize o serviço de tarefas para filtrar pelo usuário autenticado:
+   3. Proteger os endpoints usando o @UseGuards(AuthGuard('jwt')).
